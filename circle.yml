@@ -9,7 +9,6 @@ machine:
 
 dependencies:
   override:
-    - sudo pip install -Iv docker-compose==1.5.2
     - mvn package docker:build
 
 #deployment:
