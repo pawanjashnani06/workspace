@@ -15,6 +15,6 @@ deployment:
   pipeline:
     branch: "master"
     commands:
-      - docker login -u pawanjashnani -p Btech@2017
+      - docker login -e pawanjashnani@gmail.com -u pawanjashnani -p Btech@2017
       - "docker images"
       - "docker push pawanjashnani/workspace:latest"
