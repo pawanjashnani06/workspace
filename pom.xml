@@ -60,7 +60,7 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.13</version>
                 <configuration>
-                    <dockerHost>https://192.168.99.100:2376</dockerHost>
+                    <dockerHost>https://127.0.0.1:2376</dockerHost>
                     <dockerCertPath>$HOME/.docker</dockerCertPath>
                     <imageName>${project.build.finalName}/${project.artifactId}</imageName>
                     <dockerDirectory>src/main/docker</dockerDirectory>
