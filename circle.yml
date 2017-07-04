@@ -18,6 +18,5 @@ deployment:
       - "[ ! -z pawanjashnani/workspace ]"
       - docker login -e pawanjashnani@gmail.com -u pawanjashnani -p Btech@2017
       - "echo pawanjashnani/workspace:latest"
-      - "docker tag app:build pawanjashnani/workspace:latest"
       - "docker images"
       - "docker push pawanjashnani/workspace:latest"
