@@ -61,7 +61,7 @@
                 <version>0.4.13</version>
                 <configuration>
                     <dockerHost>https://127.0.0.1:2376</dockerHost>
-                    <dockerCertPath>$HOME/.docker</dockerCertPath>
+                    <dockerCertPath>/etc/docker/certs.d</dockerCertPath>
                     <imageName>${project.build.finalName}/${project.artifactId}</imageName>
                     <dockerDirectory>src/main/docker</dockerDirectory>
                     <resources>
