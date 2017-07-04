@@ -23,8 +23,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <docker.image.prefix>banking-api-proxy</docker.image.prefix>
-        <project.build.finalName>banking-api-proxy</project.build.finalName>
     </properties>
 
     <dependencies>
@@ -54,24 +52,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>0.4.13</version>
-                <configuration>
-                    <dockerHost>https://127.0.0.1:2375</dockerHost>
-                    <!--<dockerCertPath>/etc/docker/certs.d</dockerCertPath>-->
-                    <imageName>${project.build.finalName}/${project.artifactId}</imageName>
-                    <dockerDirectory>src/main/docker</dockerDirectory>
-                    <resources>
-                        <resource>
-                            <targetPath>/</targetPath>
-                            <directory>${project.build.directory}</directory>
-                            <include>${project.build.finalName}.jar</include>
-                        </resource>
-                    </resources>
-                </configuration>
             </plugin>
         </plugins>
     </build>

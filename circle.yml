@@ -1,10 +1,20 @@
 machine:
- services:
-  - docker
- environment:
-  DOCKER_HOST: tcp://127.0.0.1:2376
-  DOCKER_CERT_PATH: $HOME/.docker
-  DOCKER_TLS_VERIFY: 1
+  node:
+    version: 4.2.6
+  pre:
+    - sudo curl -L -o /usr/bin/docker 'https://s3.amazonaws.com/circle-downloads/docker-1.9.1-circleci'
+    - sudo chmod 0755 /usr/bin/docker
+  services:
+    - docker
+
 dependencies:
- override:
-  - mvn package docker:build
+  override:
+    - sudo pip install -Iv docker-compose==1.5.2
+    - mvn package docker:build
+
+#deployment:
+#  pipeline:
+#    branch: [master]
+#    commands:
+#      - make build
+#      - make push
