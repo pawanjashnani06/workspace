@@ -13,7 +13,11 @@ dependencies:
 
 deployment:
   pipeline:
-    branch: [master]
+    branch: "master"
     commands:
+      - "[ ! -z pawanjashnani/workspace ]"
       - docker login -e pawanjashnani@gmail.com -u pawanjashnani -p Btech@2017
-      - docker push gs-spring-boot-docker/banking-api-proxy
+      - "echo pawanjashnani/workspace:latest"
+      - "docker tag app:build pawanjashnani/workspace:latest"
+      - "docker images"
+      - "docker push pawanjashnani/workspace:latest"
