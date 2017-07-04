@@ -60,7 +60,7 @@
                 <configuration>
                     <!--<dockerHost>https://192.168.99.100:2376</dockerHost>-->
                     <!--<dockerCertPath>C:/Users/pawanjashnani/.docker/machine/machines/default</dockerCertPath>-->
-                    <imageName>gs-spring-boot-docker/${project.artifactId}</imageName>
+                    <imageName>pawanjashnani/workspace</imageName>
                     <dockerDirectory>src/main/docker</dockerDirectory>
                     <resources>
                         <resource>
