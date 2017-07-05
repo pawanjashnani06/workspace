@@ -68,6 +68,7 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <finalName></finalName>
                     <buildDirectory>${project.build.directory}</buildDirectory>
                     <tag>${project.version}</tag>
                 </configuration>
