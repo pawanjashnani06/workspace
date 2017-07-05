@@ -1,20 +1,7 @@
 machine:
-  node:
-    version: 4.2.6
-  pre:
-    - sudo curl -L -o /usr/bin/docker 'https://s3.amazonaws.com/circle-downloads/docker-1.9.1-circleci'
-    - sudo chmod 0755 /usr/bin/docker
   services:
     - docker
 
 dependencies:
   override:
-    - mvn package docker:build
-
-#deployment:
-#  pipeline:
-#    branch: "master"
-#    commands:
-#      - docker login -e pawanjashnani@gmail.com -u pawanjashnani -p Btech@2017
-#      - "docker images"
-#      - "docker push pawanjashnani/newworkspace:latest"
+    - mvn deploy
