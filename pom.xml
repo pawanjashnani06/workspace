@@ -68,6 +68,8 @@
                 </executions>
                 <configuration>
                     <skipPush>true</skipPush>
+                    <buildDirectory>${project.build.directory}</buildDirectory>
+                    <finalName>${project.artifactId}</finalName>
                 </configuration>
             </plugin>
         </plugins>
