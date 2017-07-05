@@ -23,6 +23,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <docker.image.prefix>banking-api-proxy</docker.image.prefix>
+        <docker.image.name>app</docker.image.name>
     </properties>
 
     <dependencies>
@@ -60,7 +62,7 @@
                 <configuration>
                     <!--<dockerHost>https://192.168.99.100:2376</dockerHost>-->
                     <!--<dockerCertPath>C:/Users/pawanjashnani/.docker/machine/machines/default</dockerCertPath>-->
-                    <imageName>pawanjashnani/newworkspace</imageName>
+                    <imageName>${docker.image.prefix}/${docker.image.name}</imageName>
                     <dockerDirectory>src/main/docker</dockerDirectory>
                     <resources>
                         <resource>

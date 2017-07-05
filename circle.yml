@@ -11,10 +11,10 @@ dependencies:
   override:
     - mvn package docker:build
 
-deployment:
-  pipeline:
-    branch: "master"
-    commands:
-      - docker login -e pawanjashnani@gmail.com -u pawanjashnani -p Btech@2017
-      - "docker images"
-      - "docker push pawanjashnani/newworkspace:latest"
+#deployment:
+#  pipeline:
+#    branch: "master"
+#    commands:
+#      - docker login -e pawanjashnani@gmail.com -u pawanjashnani -p Btech@2017
+#      - "docker images"
+#      - "docker push pawanjashnani/newworkspace:latest"
