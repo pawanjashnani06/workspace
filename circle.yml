@@ -4,5 +4,5 @@ machine:
 
 dependencies:
   override:
-    - echo docker images
+    - docker images
     - mvn deploy
