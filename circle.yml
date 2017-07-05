@@ -5,4 +5,4 @@ machine:
 dependencies:
   override:
     - docker images
-    - mvn deploy
+    - mvn dockerfile:build
