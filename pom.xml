@@ -60,7 +60,7 @@
                 <configuration>
                     <!--<dockerHost>https://192.168.99.100:2376</dockerHost>-->
                     <!--<dockerCertPath>C:/Users/pawanjashnani/.docker/machine/machines/default</dockerCertPath>-->
-                    <imageName>pawanjashnani/workspace</imageName>
+                    <imageName>pawanjashnani/newworkspace</imageName>
                     <dockerDirectory>src/main/docker</dockerDirectory>
                     <resources>
                         <resource>

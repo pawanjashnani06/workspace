@@ -17,4 +17,4 @@ deployment:
     commands:
       - docker login -e pawanjashnani@gmail.com -u pawanjashnani -p Btech@2017
       - "docker images"
-      - "docker push pawanjashnani/workspace:latest"
+      - "docker push pawanjashnani/newworkspace:latest"
